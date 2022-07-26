@@ -128,7 +128,7 @@ void lineFollow()
         wheel(0, 0);
         delay(10000);
     }
-    else if (middleSensors && leftSensors)
+    else if ((middleSensors && leftSensors) || (IRValue[0] + IRValue[1] + IRValue[2] + IRValue[3] + IRValue[4] >= 4))
     {
         delay(300);
         wheel(0, 0);
@@ -144,7 +144,7 @@ void lineFollow()
         wait();
         // delay(500);
     }
-    else if (middleSensors && rightSensors)
+    else if (middleSensors && rightSensors || (IRValue[5] + IRValue[6] + IRValue[7] + IRValue[8] + IRValue[9] >= 4))
     {
         delay(300);
         wheel(0, 0);
